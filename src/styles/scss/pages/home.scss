@@ -1,0 +1,65 @@
+@use "../variables" as *;
+
+#HomePage {
+  margin-top: 200px;
+  color: $white;
+
+  @media screen and (max-width: 1024px) {
+    color: white;
+    margin-top: 0;
+  }
+
+  .explore-btn-box {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .explore-btn-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .explore-text-content {
+      text-align: center;
+    }
+  }
+
+  .explore-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 250px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: $white;
+    cursor: pointer;
+    transition: 0.5s ease;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); // Soft outer glow
+
+    &:hover {
+      box-shadow: 0 0 0 100px rgba($white, 0.1); // Simulated border glow
+      color: $grey;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .explore-btn {
+      margin-top: 100px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .explore-btn {
+      width: 200px;
+    }
+  }
+}

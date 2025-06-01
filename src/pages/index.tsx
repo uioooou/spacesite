@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import DestinationPage from "./destination";
 import HomePage from "./homePage";
 
 export default function Home() {
@@ -27,6 +28,21 @@ export default function Home() {
       bgImg: "/assets/technology/background-technology-desktop.jpg",
     },
   ];
+
+  const renderPage = () => {
+    switch (routeSelected) {
+      case "Home":
+        return <HomePage setExploreAction={setRouteSelected} />;
+      case "Destination":
+        return <DestinationPage />;
+      // case "Crew":
+      //   return <CrewPage />;
+      // case "Technology":
+      //   return <TechnologyPage />;
+      default:
+        return null;
+    }
+  };
 
   useEffect(() => {
     const selectedRoute = routeList.find(
@@ -55,10 +71,10 @@ export default function Home() {
         <section className="main-container">
           <div className="navbar">
             <Image
-              src="/assets/shared/logo.svg"
+              src="./assets/shared/logo.svg"
               alt="Space Tourism Logo"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               className=""
             />
             <div className="navbar-center">
@@ -73,13 +89,17 @@ export default function Home() {
                   }`}
                   onClick={() => setRouteSelected(route.name)}
                 >
-                  <span className="text-preset-8 font-bold">{route.number}</span>
+                  <span className="text-preset-8 font-bold">
+                    {route.number}
+                  </span>
                   <span className="text-preset-8">{route.name}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <HomePage />
+          {
+            renderPage()
+          }
         </section>
       </main>
     </>

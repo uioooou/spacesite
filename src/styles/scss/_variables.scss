@@ -1,30 +1,30 @@
-$blue-900: #0B0D17;
-$blue-300: #D0D6F9;
+$blue-900: #0b0d17;
+$blue-300: #d0d6f9;
 $white: #ffffff;
 $white-transparent: #ffffff6e;
 $grey: #979797;
 
-$font-family-bellefair: 'Bellefair', serif;
-$font-family-barlow: 'Barlow', sans-serif;
-$font-family-barlow-condensed: 'Barlow-Condensed', sans-serif;
+$font-family-bellefair: "Bellefair", serif;
+$font-family-barlow: "Barlow", sans-serif;
+$font-family-barlow-condensed: "Barlow-Condensed", sans-serif;
 
 .text-preset-1 {
   font-family: $font-family-bellefair;
-  font-size: 144px;
-  line-height: 171.9%;
-  letter-spacing: 0px;
+  font-size: clamp(80px, 8vw, 144px); // instead of 25vw
+  line-height: 1.72;
+  letter-spacing: 0;
 }
 .text-preset-2 {
   font-family: $font-family-bellefair;
-  font-size: 100px;
-  line-height: 114.6%;
-  letter-spacing: 0px;
+  font-size: clamp(32px, 6vw, 100px);
+  line-height: 1.146;
+  letter-spacing: 0;
 }
 .text-preset-3 {
   font-family: $font-family-bellefair;
-  font-size: 56px;
-  line-height: 64.2%;
-  letter-spacing: 0px;
+  font-size: clamp(28px, 4.5vw, 56px);
+  line-height: 1.142;
+  letter-spacing: 0;
 }
 .text-preset-4 {
   font-family: $font-family-bellefair;
@@ -34,13 +34,13 @@ $font-family-barlow-condensed: 'Barlow-Condensed', sans-serif;
 }
 .text-preset-5 {
   font-family: $font-family-barlow-condensed;
-  font-size: 28px;
+  font-size: clamp(18px, 4.5vw, 28px);
   line-height: 33.6%;
   letter-spacing: 4px;
 }
 .text-preset-6 {
   font-family: $font-family-bellefair;
-  font-size: 28px;
+  font-size: clamp(22px, 4.5vw, 28px);
   line-height: 32.1%;
   letter-spacing: 0px;
 }
