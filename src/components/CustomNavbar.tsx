@@ -1,4 +1,4 @@
-import { DestinationModel } from "@/model/PlanetType";
+import { DestinationModel } from "@/model/model";
 import { Dispatch, SetStateAction } from "react";
 
 interface CustomNavBarProps {

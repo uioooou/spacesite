@@ -1,11 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import DestinationPage from "./destination";
+import { List } from "react-bootstrap-icons";
 import HomePage from "./homePage";
+import { AppContext } from "@/components/AppContext";
+import OffCanvas from "@/components/OffCanvas";
 
 export default function Home() {
   const [routeSelected, setRouteSelected] = useState("Home");
+  const { setModalState} = useContext(AppContext)!;
   const routeList = [
     {
       name: "Home",
@@ -75,7 +79,7 @@ export default function Home() {
               alt="Space Tourism Logo"
               width={50}
               height={50}
-              className=""
+              className="navbar-icon"
             />
             <div className="navbar-center">
               <div className="line"></div>
@@ -96,12 +100,15 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+            <div className="mobile-menu">
+              <List size={40} color="white" onClick={()=>setModalState("Open")} />
+            </div>
           </div>
-          {
-            renderPage()
-          }
+
+          {renderPage()}
         </section>
       </main>
+      <OffCanvas route={routeList} routeSelected={routeSelected} setRouteSelected={setRouteSelected}/>
     </>
   );
 }

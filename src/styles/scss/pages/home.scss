@@ -1,7 +1,6 @@
 @use "../variables" as *;
 
 #HomePage {
-  margin-top: 200px;
   color: $white;
 
   @media screen and (max-width: 1024px) {

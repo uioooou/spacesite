@@ -75,8 +75,8 @@
   }
 
   .planet-image {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
   }
   @media screen and (max-width: 1024px) {
     .planet-image {
@@ -93,7 +93,7 @@
   }
 
   .subtitle{
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 668px) {
       text-align: center;
     }
   }
